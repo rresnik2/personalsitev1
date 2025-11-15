@@ -36,15 +36,11 @@ body {
     align-items: center;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
 .nav-links {
     list-style: none;
     display: flex;
     gap: 30px;
+    font-size: 1.25rem;
 }
 
 .nav-links a {
@@ -57,10 +53,21 @@ body {
     color: #a8dadc;
 }
 
+#profile-img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;  /* Makes it circular */
+    object-fit: cover;   /* Crops nicely to fit the circle */
+}
+
 /* === HOME SECTION === */
 .home {   
-    background-color: #f1faee;
-    background: linear-gradient(135deg, rgba(168, 218, 220, 0.5), rgba(69, 123, 157, 0.5));
+     background-image: url('bellevuemoon.jpg');
+    
+    /* Customize properties for each image (comma-separated list) */
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover; /* Example sizes */
     color: white;
     padding: 150px 0 100px;
     text-align: center;
@@ -71,7 +78,7 @@ body {
 
 .home h1 {
     font-size: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: .75rem;
 }
 
 .highlight {
