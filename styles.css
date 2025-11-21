@@ -1,5 +1,3 @@
-
-
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +12,7 @@ body {
 
 /* === REUSABLE CONTAINER === */
 .container {
-    max-width: 1000px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -22,8 +20,9 @@ body {
 /* === NAVIGATION BAR === */
 .navbar {
     background: #1d3557;
+    background-image: linear-gradient(to right, #e64a39, #e17b3d, #daa156, #d5c17f, #d8dcaf, #caddbb, #c2ddc7, #c1dbd0, #9cc4bf, #78adb3, #5a94a9, #457b9d);
     color: white;
-    padding: 1rem 0;
+    padding: .5rem 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -40,7 +39,7 @@ body {
     list-style: none;
     display: flex;
     gap: 30px;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 .nav-links a {
@@ -54,26 +53,38 @@ body {
 }
 
 #profile-img {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;  /* Makes it circular */
-    object-fit: cover;   /* Crops nicely to fit the circle */
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    /* Makes it circular */
+    object-fit: cover;
+    object-position: center top;
+    /* Crops nicely to fit the circle */
 }
 
 /* === HOME SECTION === */
-.home {   
-     background-image: url('bellevuemoon.jpg');
-    
+.home {
+    background-image: url('bellevuemoon.jpg');
+
     /* Customize properties for each image (comma-separated list) */
     background-position: left top;
     background-repeat: no-repeat;
-    background-size: cover; /* Example sizes */
+    background-size: cover;
+    /* Example sizes */
     color: white;
     padding: 150px 0 100px;
     text-align: center;
     min-height: 100vh;
     display: flex;
     align-items: center;
+}
+.home .container{
+    background-color: rgba(241,250,238, 0.2); /* Black with 50% opacity */
+  /* Or using HSLA: */
+  /* background-color: hsla(0, 0%, 0%, 0.5); */ /* Black with 50% opacity */
+    padding: 20px;
+    border: 2px solid #f1faee;
+    border-radius: 20px;
 }
 
 .home h1 {
@@ -144,7 +155,7 @@ h2 {
     background: white;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
 
@@ -160,6 +171,18 @@ h2 {
 .project-card p {
     color: #666;
     margin-bottom: 20px;
+}
+
+.button-stack {
+    display: flex;
+    
+    padding: 10px 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+    flex-direction: row;
+    
 }
 
 .tech-stack {
@@ -199,13 +222,14 @@ h2 {
 /* === RESPONSIVE DESIGN === */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* We'll handle mobile menu with JS later */
+        display: none;
+        /* We'll handle mobile menu with JS later */
     }
-    
+
     .home h1 {
         font-size: 2rem;
     }
-    
+
     .project-grid {
         grid-template-columns: 1fr;
     }
